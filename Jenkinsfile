@@ -1,5 +1,7 @@
 pipeline {
-  agent $NODE_NAME
+  agent {
+    label $NODE_NAME
+  }
   stages {
     stage {
       sh 'echo test'
