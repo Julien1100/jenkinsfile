@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label $NODE_NAME
+    label ${NODE_NAME}
   }
   stages {
     stage {
