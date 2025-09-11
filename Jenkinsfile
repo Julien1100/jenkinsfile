@@ -1,10 +1,12 @@
 pipeline {
   agent {
-    label ${NODE_NAME}
+    label "${params.NODE}"
   }
   stages {
-    stage {
-      sh 'echo test'
+    stage ('Test') {
+      steps {
+        sh 'echo test'
+      }
     }
   }
 }
