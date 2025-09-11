@@ -4,7 +4,7 @@ pipeline {
   }
   parameters {
     string(
-      name: 'NODE',
+      name: 'NODE_NAME',
       defaultValue: 'node',
       description: 'Nom du nœud cible'
     )
