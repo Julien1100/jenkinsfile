@@ -1,14 +1,19 @@
 pipeline {
   agent {
-    label "${params.NODE}"
+    label "${params.NODE_NAME}"
   }
   parameters {
-    string(name: 'NODE', description: 'Nom du nœud cible')
+    string(
+      name: 'NODE',
+      defaultValue: 'node',
+      description: 'Nom du nœud cible'
+    )
   }
+  
   stages {
-    stage ('Test') {
+    stage('Test') {
       steps {
-        sh 'echo test'
+        sh 'echo "Job lancé sur le nœud : $NODE_NAME"'
       }
     }
   }
