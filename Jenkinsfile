@@ -11,7 +11,10 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'echo "Job lancé sur le nœud : $NODE_NAME"'
+        sh '''
+        #!/bin/bash
+        echo "Job lancé sur le nœud : $NODE_NAME"
+        '''
       }
     }
   }
