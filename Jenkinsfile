@@ -1,5 +1,5 @@
 pipeline {
-  agent { label ${NODE_NAME} }
+  agent { label "${NODE_NAME}" }
   // parameters {
     // string(
       // name: 'NODE_NAME',
