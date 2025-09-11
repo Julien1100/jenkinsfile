@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label "${params.NODE_NAME}"
+    label 'maple-jenkins-node'
   }
   parameters {
     string(
