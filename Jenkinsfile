@@ -1,7 +1,19 @@
 pipeline {
   agent { label "${NODE_NAME}" }
+  tools {
+    jdk('JDK17')
+  }
   
   stages {
+    stage('Java Version') {
+      steps {
+        sh '''
+        #!/bin/bash
+        java --version
+        '''
+      }
+    }
+    
     stage('Test') {
       steps {
         sh '''
