@@ -1,0 +1,11 @@
+pipeline {
+  agent { label "${NODE_NAME}" }
+
+  stages {
+    stage('Echo') {
+      steps {
+        echo 'Test Prod'
+      }
+}
+}
+}
