@@ -15,12 +15,14 @@ pipeline {
         sh '''
         #!/bin/bash
         echo "Deploy"
+        pwd
+        cd ..
+        pwd
         '''
-      }
-steps {
         sh '''
         #!/bin/bash
         echo "Deploy again"
+        pwd
         '''
       }
 }
