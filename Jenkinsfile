@@ -1,7 +1,7 @@
 pipeline {
   agent { label "${NODE_NAME}" }
   tools {
-    jdk('JDK17')
+    jdk 'JDK17'
   }
   
   stages {
