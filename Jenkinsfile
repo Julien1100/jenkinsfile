@@ -10,5 +10,19 @@ pipeline {
         '''
       }
     }
-  }
+    stage('Deploy') {
+      steps {
+        sh '''
+        #!/bin/bash
+        echo "Deploy"
+        '''
+      }
+steps {
+        sh '''
+        #!/bin/bash
+        echo "Deploy again"
+        '''
+      }
+}
+}
 }
